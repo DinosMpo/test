@@ -3,8 +3,6 @@
 function Store(number, name) {
 	this.number = number;
 	this.name = name;
-
-
 };
 
 let numbers = ['001', '006', '010', '016', '020', '024', '028', '050', '056', '060', '070', '075', '080', '085', '090', '092', '094', '098', '202', '203', '204', '208', '214', '221', '222', '225', '226', '231', '234', '239', '244', '245', '026', '228', '229', '230', '232', '233', '236', '238', '242', '220', '227', '235', '237', '240', '241', '243'];
@@ -19,16 +17,17 @@ for(var i=0; i<numbers.length; i++) {
 let input = document.getElementById('input');
 let button = document.getElementById('button');
 let view = document.getElementById('view');
+// let clear = document.getElementById('clear');
 
 button.addEventListener('click', function() {
-	// console.log('it works');
-	// console.log(input.value);
-	let value = input.value;
-
+	let value = input.value.toString();
+	console.log(value);
 	for(var i=0; i<stores.length; i++) {
 		if(value == stores[i].number) {
 			console.log(stores[i].name);
-			view.innerHTML = stores[i].name.toUpperCase();
+			view.innerHTML = '7' + stores[i].number + ' / ' + stores[i].name.toUpperCase();
+			input.value = '';
+			
 		}
 	}
 });
@@ -38,5 +37,4 @@ input.addEventListener("keyup", function(event) {
     if (event.keyCode === 13) {
         button.click();
     }
-}
-)
+})
