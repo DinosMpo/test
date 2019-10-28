@@ -21,14 +21,22 @@ let view = document.getElementById('view');
 
 button.addEventListener('click', function() {
 	let value = input.value.toString();
+	let found = false;
 	console.log(value);
 	for(var i=0; i<stores.length; i++) {
 		if(value == stores[i].number) {
 			console.log(stores[i].name);
 			view.innerHTML = '7' + stores[i].number + ' / ' + stores[i].name.toUpperCase();
 			input.value = '';
-			
+			found = true;
+			break;
+		}else{
+			found = false;
 		}
+	}
+
+	if(!found) {
+		view.innerHTML = 'Δεν υπάρχει'
 	}
 });
 
