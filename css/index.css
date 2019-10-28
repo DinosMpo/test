@@ -1,0 +1,21 @@
+body {
+	background: #ff6600;
+	margin: 0 auto;
+	padding: 0 auto;
+	text-align: center;
+}
+
+#content {
+	display: inline-block;
+	position: absolute;
+	margin: 0 auto;
+	top: 40%;
+	transform: translateX(-50%);
+}
+
+#container {
+	width: 200px;
+	/*border: 1px solid black;*/
+}
+
+
